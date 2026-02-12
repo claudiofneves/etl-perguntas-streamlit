@@ -1,0 +1,461 @@
+{
+  "1) Dilúvio de Dados – Problematização": [
+    {
+      "id": "B1_Q1",
+      "pergunta": "Se dado bruto é só “barulho”, o que transforma dado em valor?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Somente volume",
+        "B": "Somente armazenamento",
+        "C": "Contexto, qualidade e uso",
+        "D": "Apenas visual bonito"
+      },
+      "gabarito": "C",
+      "explicacao": "Dado vira valor quando é confiável, contextualizado e aplicado em decisões/processos. Volume e storage sozinhos não geram valor."
+    },
+    {
+      "id": "B1_Q2",
+      "pergunta": "Qual é o maior risco de tomar decisão baseada em dado sujo?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Aumentar custos de armazenamento",
+        "B": "Tomar decisão errada",
+        "C": "Ter dashboards mais lentos",
+        "D": "Ter menos tabelas no banco"
+      },
+      "gabarito": "B",
+      "explicacao": "Dado sujo distorce indicadores e leva a decisões incorretas, afetando receita, custo, risco e estratégia."
+    },
+    {
+      "id": "B1_Q3",
+      "pergunta": "Vocês já viram um dashboard bonito, mas com dados errados? O problema principal costuma estar em qual ponto?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Na paleta de cores",
+        "B": "Na falta de filtros",
+        "C": "Na qualidade/integração dos dados e regras",
+        "D": "No tamanho da tela"
+      },
+      "gabarito": "C",
+      "explicacao": "Visual não corrige base ruim. Se a ingestão, integração, regras de negócio e validações estiverem erradas, o dashboard ficará “bonito e errado”."
+    },
+    {
+      "id": "B1_Q4",
+      "pergunta": "O que é pior para a empresa?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Não ter dados",
+        "B": "Ter dados incorretos",
+        "C": "Ter muitos dados",
+        "D": "Ter poucos gráficos"
+      },
+      "gabarito": "B",
+      "explicacao": "Dados incorretos criam falsa confiança e decisões erradas. Sem dados, pelo menos a limitação é explícita; com dado errado, o risco é invisível."
+    },
+    {
+      "id": "B1_Q5",
+      "pergunta": "Toda empresa precisa de Big Data?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Sim, sempre",
+        "B": "Não, depende do contexto e objetivo",
+        "C": "Só empresas de tecnologia",
+        "D": "Só quando tiver Data Lake"
+      },
+      "gabarito": "B",
+      "explicacao": "Big Data faz sentido quando volume/velocidade/variedade exigem. Muitas empresas resolvem com bons dados, modelagem e processos, mesmo com volumes menores."
+    }
+  ],
+
+  "2) Entendendo ETL (Extract, Transform, Load)": [
+    {
+      "id": "B2_Q1",
+      "pergunta": "O que pode dar errado na etapa de extração?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Fonte indisponível, schema mudando, permissão/limite de API",
+        "B": "Apenas erro de gráfico",
+        "C": "Somente erro de cor",
+        "D": "Nada dá errado"
+      },
+      "gabarito": "A",
+      "explicacao": "Extração depende da fonte. Falhas comuns: indisponibilidade, alteração de colunas, limites, autenticação, paginação e dados incompletos."
+    },
+    {
+      "id": "B2_Q2",
+      "pergunta": "Transformar significa apenas limpar dados?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Sim",
+        "B": "Não, inclui padronização, regras de negócio e enriquecimento",
+        "C": "Somente remover nulos",
+        "D": "Somente juntar tabelas"
+      },
+      "gabarito": "B",
+      "explicacao": "Transformação inclui limpeza, padronização (datas/códigos), deduplicação, regras de negócio, joins, enriquecimento e derivação de métricas."
+    },
+    {
+      "id": "B2_Q3",
+      "pergunta": "Se eu não remover duplicados, o que pode acontecer nas análises?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Indicadores inflados e decisões erradas",
+        "B": "Indicadores mais precisos",
+        "C": "Menos dados para analisar",
+        "D": "Nada muda"
+      },
+      "gabarito": "A",
+      "explicacao": "Duplicidade soma/conta duas vezes e distorce KPIs (receita, usuários, eventos), impactando previsões e tomadas de decisão."
+    },
+    {
+      "id": "B2_Q4",
+      "pergunta": "Por que padronizar datas é tão importante?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Para ficar mais bonito",
+        "B": "Para evitar erro de interpretação e permitir comparações temporais corretas",
+        "C": "Para diminuir o tamanho do arquivo",
+        "D": "Para não precisar de calendário"
+      },
+      "gabarito": "B",
+      "explicacao": "Datas em formatos diferentes quebram filtros, agregações e séries temporais. Padronizar evita ambiguidades (MM/DD vs DD/MM) e melhora consistência."
+    },
+    {
+      "id": "B2_Q5",
+      "pergunta": "Em qual etapa costuma ocorrer mais erro (na prática)?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Somente no Load",
+        "B": "Somente no Extract",
+        "C": "Principalmente no Transform (regras, padronização, qualidade)",
+        "D": "Somente no dashboard"
+      },
+      "gabarito": "C",
+      "explicacao": "A maior complexidade está em regras e qualidade: juntar fontes, tratar exceções, padronizar e validar. É onde mais surgem bugs e inconsistências."
+    },
+    {
+      "id": "B2_Q6",
+      "pergunta": "Se a transformação é a etapa mais crítica, por que muitas empresas negligenciam ela?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Porque é a parte mais visível",
+        "B": "Porque exige entendimento de negócio, testes e governança (e isso dá trabalho)",
+        "C": "Porque não impacta resultados",
+        "D": "Porque sempre dá pra corrigir no dashboard"
+      },
+      "gabarito": "B",
+      "explicacao": "Transformação exige domínio do negócio, validação, testes e manutenção. Muitas empresas focam no rápido/visual e “empurram” qualidade para depois."
+    }
+  ],
+
+  "3) ETL vs ELT – Pensamento Comparativo": [
+    {
+      "id": "B3_Q1",
+      "pergunta": "Qual cenário favorece ETL tradicional?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Quando é preciso validar/transformar antes de carregar por compliance ou performance",
+        "B": "Quando não existe regra de negócio",
+        "C": "Quando tudo é dado sem estrutura e sem governança",
+        "D": "Quando o destino não aceita dados"
+      },
+      "gabarito": "A",
+      "explicacao": "ETL é útil quando você precisa chegar no destino já com dados limpos/validados, reduzindo risco e custo no repositório final."
+    },
+    {
+      "id": "B3_Q2",
+      "pergunta": "Qual cenário favorece ELT?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Quando o destino (DW/Lakehouse) é forte para processar e você quer carregar rápido e transformar depois",
+        "B": "Quando não existe nuvem",
+        "C": "Quando você quer transformar tudo antes e nunca reprocessar",
+        "D": "Quando dados não mudam"
+      },
+      "gabarito": "A",
+      "explicacao": "ELT tira proveito do poder de processamento do destino (cloud DW/Lakehouse) e facilita reprocessamentos e múltiplas visões."
+    },
+    {
+      "id": "B3_Q3",
+      "pergunta": "Se o processamento é barato na nuvem, ainda faz sentido transformar antes (ETL)?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Nunca faz sentido",
+        "B": "Às vezes sim: custo, segurança, governança e qualidade podem exigir validação antes",
+        "C": "Só faz sentido se for on-premise",
+        "D": "Só faz sentido para dados pequenos"
+      },
+      "gabarito": "B",
+      "explicacao": "Mesmo com processamento barato, há casos de compliance, segurança, latência e qualidade que justificam transformar/validar antes."
+    },
+    {
+      "id": "B3_Q4",
+      "pergunta": "O que acontece se eu carregar dados sujos direto no Data Lake sem estratégia?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Nada, o lake resolve sozinho",
+        "B": "Você cria um “data swamp” (lago virando pântano) e aumenta retrabalho",
+        "C": "Os dashboards ficam mais rápidos",
+        "D": "A governança melhora automaticamente"
+      },
+      "gabarito": "B",
+      "explicacao": "Sem catálogo, padrões e camadas, o Data Lake vira data swamp: difícil achar, confiar e usar dados, elevando custo e tempo."
+    },
+    {
+      "id": "B3_Q5",
+      "pergunta": "ELT é sempre melhor que ETL?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Sim",
+        "B": "Não, depende do contexto (compliance, custo, maturidade, arquitetura)",
+        "C": "Só em empresas grandes",
+        "D": "Só em startups"
+      },
+      "gabarito": "B",
+      "explicacao": "Não existe “sempre”. A escolha depende de requisitos (segurança, custo, performance), time, ferramentas e maturidade."
+    },
+    {
+      "id": "B3_Q6",
+      "pergunta": "Se você fosse arquiteto de dados de uma fintech, qual princípio mais pesa na escolha ETL/ELT?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Somente velocidade",
+        "B": "Somente custo",
+        "C": "Compliance, rastreabilidade e qualidade (além de performance/custo)",
+        "D": "Somente preferência pessoal"
+      },
+      "gabarito": "C",
+      "explicacao": "Fintechs lidam com regulação, auditoria e risco. Rastreabilidade, consistência e controles pesam tanto quanto custo e performance."
+    }
+  ],
+
+  "4) Por que Python?": [
+    {
+      "id": "B4_Q1",
+      "pergunta": "O que o Pandas resolve dentro do ETL?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Manipulação de dados tabulares (leitura, limpeza, joins, agregações)",
+        "B": "Somente criação de dashboards",
+        "C": "Somente deploy em nuvem",
+        "D": "Somente banco de dados"
+      },
+      "gabarito": "A",
+      "explicacao": "Pandas é ótimo para operações em DataFrames: leitura, limpeza, transformação, joins e agregações, especialmente em volumes pequenos/médios."
+    },
+    {
+      "id": "B4_Q2",
+      "pergunta": "Quando o Pandas deixa de ser suficiente?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Quando o volume e/ou tempo de processamento estouram memória/tempo",
+        "B": "Quando existe apenas 1 tabela",
+        "C": "Quando não há gráficos",
+        "D": "Quando o dado é CSV"
+      },
+      "gabarito": "A",
+      "explicacao": "Pandas roda em memória. Em dados muito grandes, pode ser necessário Spark, Dask, DuckDB, processamento incremental ou ELT no DW."
+    },
+    {
+      "id": "B4_Q3",
+      "pergunta": "Qual a diferença mais direta entre Pandas e Dask?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Dask paraleliza/distribui e processa datasets maiores que memória (em partes)",
+        "B": "Pandas é para imagens e Dask para vídeos",
+        "C": "Dask não lê arquivos",
+        "D": "São iguais"
+      },
+      "gabarito": "A",
+      "explicacao": "Dask permite paralelismo e processamento em chunks/distribuído, mantendo API similar ao Pandas para escalar além da memória."
+    },
+    {
+      "id": "B4_Q4",
+      "pergunta": "Python substitui ferramentas como SSIS ou Data Factory?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Sempre substitui",
+        "B": "Nunca substitui",
+        "C": "Depende: Python pode fazer ETL, mas orquestração/integrações e governança podem ser melhor atendidas por plataformas",
+        "D": "Só substitui se usar Jupyter"
+      },
+      "gabarito": "C",
+      "explicacao": "Python resolve transformação/automação, mas plataformas trazem conectores, gestão, monitoramento e governança. Muitas arquiteturas combinam ambos."
+    },
+    {
+      "id": "B4_Q5",
+      "pergunta": "O que resolve melhor o problema no mundo real?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Somente a linguagem",
+        "B": "Somente o dashboard",
+        "C": "Modelagem, regras de negócio e governança (a linguagem é meio)",
+        "D": "Somente a nuvem"
+      },
+      "gabarito": "C",
+      "explicacao": "Ferramentas ajudam, mas o que sustenta é modelagem, definição de regras, qualidade e governança. Linguagem é o instrumento."
+    }
+  ],
+
+  "5) Construção de Pipeline": [
+    {
+      "id": "B5_Q1",
+      "pergunta": "Pipeline é script ou arquitetura?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Somente script",
+        "B": "Somente arquitetura",
+        "C": "É um fluxo arquitetado (pode ter scripts, jobs, camadas, padrões e monitoramento)",
+        "D": "É só uma query"
+      },
+      "gabarito": "C",
+      "explicacao": "Pipeline é a solução completa: etapas, padrões, camadas, execução, controle, logs, retries e governança. Pode incluir scripts, sim."
+    },
+    {
+      "id": "B5_Q2",
+      "pergunta": "O que acontece se o pipeline falhar às 3h da manhã e não houver monitoramento?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Nada, ele volta sozinho sempre",
+        "B": "O time descobre tarde, dados ficam desatualizados e decisões ficam comprometidas",
+        "C": "Os dados ficam melhores",
+        "D": "O dashboard corrige automaticamente"
+      },
+      "gabarito": "B",
+      "explicacao": "Sem monitoramento/alerta, falhas passam despercebidas. Isso impacta SLAs, confiança no dado e decisões do negócio."
+    },
+    {
+      "id": "B5_Q3",
+      "pergunta": "Monitoramento em pipeline é opcional?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Sim, sempre opcional",
+        "B": "Não, é parte da confiabilidade (observabilidade)",
+        "C": "Só em projetos acadêmicos",
+        "D": "Só quando tem Big Data"
+      },
+      "gabarito": "B",
+      "explicacao": "Pipeline sem monitoramento vira caixa-preta. Observabilidade é essencial: logs, métricas, alertas, qualidade e rastreabilidade."
+    },
+    {
+      "id": "B5_Q4",
+      "pergunta": "Orquestração é luxo ou necessidade?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Luxo",
+        "B": "Necessidade quando há dependências, horários, retries, SLAs e múltiplas tarefas",
+        "C": "Só para dashboards",
+        "D": "Só para banco relacional"
+      },
+      "gabarito": "B",
+      "explicacao": "Orquestradores organizam dependências, reprocessos, agendamentos e falhas. Em produção, isso reduz risco e aumenta confiabilidade."
+    },
+    {
+      "id": "B5_Q5",
+      "pergunta": "O que diferencia um pipeline acadêmico de um pipeline corporativo?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Só o tema",
+        "B": "Governança, testes, monitoramento, versionamento, qualidade, segurança e manutenção",
+        "C": "Só a linguagem",
+        "D": "Só o tamanho do arquivo"
+      },
+      "gabarito": "B",
+      "explicacao": "Em empresa, há SLA, escala, qualidade, auditoria, acesso, segurança, custo e continuidade. Isso exige padrões e controles."
+    },
+    {
+      "id": "B5_Q6",
+      "pergunta": "Se você sair da empresa hoje, alguém consegue manter seu pipeline? O que isso mede?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Apenas velocidade do código",
+        "B": "Maturidade: documentação, legibilidade, padrões, automação e governança",
+        "C": "A cor do dashboard",
+        "D": "O número de gráficos"
+      },
+      "gabarito": "B",
+      "explicacao": "Manutenibilidade depende de documentação, padrões, testes, pipeline reproduzível e transparência. Isso é maturidade de engenharia."
+    }
+  ],
+
+  "6) Futuro dos Dados": [
+    {
+      "id": "B6_Q1",
+      "pergunta": "O que muda com IA dentro do pipeline?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Nada muda",
+        "B": "Pode automatizar validações, classificação, enriquecimento e detecção de anomalias (com governança)",
+        "C": "Substitui completamente engenharia de dados",
+        "D": "Elimina necessidade de dados bons"
+      },
+      "gabarito": "B",
+      "explicacao": "IA pode ajudar em qualidade, detecção de anomalias e enriquecimento. Mas precisa governança e dados confiáveis; não elimina fundamentos."
+    },
+    {
+      "id": "B6_Q2",
+      "pergunta": "Data Lake substitui Data Warehouse?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Sim, sempre",
+        "B": "Não: normalmente são complementares (lake para bruto/variedade, DW para modelagem/BI)",
+        "C": "Só substitui em empresa pequena",
+        "D": "Só substitui se usar CSV"
+      },
+      "gabarito": "B",
+      "explicacao": "Lake e DW têm papéis diferentes. Muitas arquiteturas modernas (lakehouse) tentam unir vantagens, mas ainda há camadas e propósitos."
+    },
+    {
+      "id": "B6_Q3",
+      "pergunta": "Engenharia de dados é moda ou necessidade estrutural?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Moda",
+        "B": "Necessidade estrutural para escalar dados com confiabilidade",
+        "C": "Só para Big Tech",
+        "D": "Só para IA"
+      },
+      "gabarito": "B",
+      "explicacao": "Sem engenharia (pipelines, qualidade, governança), dados não escalam com confiança. Isso é base para BI, produtos e IA."
+    },
+    {
+      "id": "B6_Q4",
+      "pergunta": "O próximo grande insight costuma estar mais associado a qual fator?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Coletar o máximo possível sem organizar",
+        "B": "Organizar bem e integrar dados relevantes (qualidade + contexto)",
+        "C": "Ter mais dashboards",
+        "D": "Trocar a ferramenta"
+      },
+      "gabarito": "B",
+      "explicacao": "Insights emergem quando dados relevantes estão bem integrados, consistentes e com contexto. Coletar sem organizar vira ruído."
+    },
+    {
+      "id": "B6_Q5",
+      "pergunta": "Quem tem vantagem competitiva?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Quem coleta mais dados",
+        "B": "Quem organiza melhor (qualidade, governança e uso) e decide mais rápido",
+        "C": "Quem tem o dashboard mais bonito",
+        "D": "Quem tem mais servidores"
+      },
+      "gabarito": "B",
+      "explicacao": "Vantagem vem de transformar dados em decisão: qualidade, governança, acessibilidade e velocidade de resposta ao negócio."
+    },
+    {
+      "id": "B6_Q6",
+      "pergunta": "O que você prefere ser (na prática profissional)?",
+      "tipo": "multipla",
+      "opcoes": {
+        "A": "Consumidor de dashboards",
+        "B": "Construtor de pipelines (e dashboards com base confiável)",
+        "C": "Apenas designer de relatório",
+        "D": "Apenas coletor de dados"
+      },
+      "gabarito": "B",
+      "explicacao": "Construir pipelines (com qualidade e governança) sustenta análises confiáveis e escala. Dashboards são a ponta visível da engenharia."
+    }
+  ]
+}
